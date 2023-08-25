@@ -36,14 +36,55 @@ https://github.com/maorshriki/workout_app_kotlin/assets/74913575/f2f5f706-a87a-4
 2. Open the project in Android Studio.
 3. Build and run the application on an Android emulator or physical device.
 
+
 ## API Integration
+ * The app is written in Kotlin and leverages Hilt for dependency injection.
+ * It interacts with multiple APIs to provide features related to workouts,
+ * diet menus, and BMI calculation. The app uses the Retrofit library to handle API calls.
 
-The Workout App Kotlin utilizes the WgerApiClient to fetch workout exercise data from the RapidAPI platform. To successfully run the app, make sure you have obtained a valid RapidAPI key and host. Update the `WgerApiClient` class with your API key and host in the `getExerciseList` function.
+### Required Configuration:
+ * Before running the app, you need to set up your API key.
+ * This key is used for all the APIs accessed by the app.
+ *
+ * 1. The API key is retrieved through the ApiKey object located in the com.example.myapplication.utils package.
+ *    Replace the existing API key with yours:
+ *    
+ *    object ApiKey {
+ *        private const val apiKey: String = "YOUR_API_KEY"
+ *        fun getApiKey(): String {
+ *            return apiKey
+ *        }
+ *    }
+ *
+ * 2. The API key is then accessed in the NetworkModule to provide headers for all the API calls made through Retrofit.
+ *    If you have set the API key correctly, you don't need to change anything in the NetworkModule.
+ *    
+ *    private var apiKey: String? = null
+ *
+ *    @Provides
+ *    @Singleton
+ *    fun provideApiKey(): String {
+ *        if (apiKey == null) {
+ *            apiKey = ApiKey.getApiKey()
+ *        }
+ *        return apiKey!!
+ *    }
+ 
+### APIs Used:
+ * ----------
+ * 1. Workout API: Fetches exercise data from the RapidAPI platform.
+ *    The API is accessed through the WorkoutApiService interface.
+ *
+ * 2. Menu API: Provides keto diet menu options from the RapidAPI platform.
+ *    The API is accessed through the MenuApiService interface.
+ *
+ * 3. BMI API: Provides BMI calculations from the RapidAPI platform.
+ *    The API is accessed through the BMIApiService interface.
+ *
+ * Each API service is set up as a singleton via Hilt's @Singleton annotation and is provided
+ * through separate methods in the NetworkModule.
+ */
 
-```kotlin
-private val rapidApiKey = "YOUR_API_KEY"
-private val rapidApiHost = "YOUR_API_HOST"
-```
 
 ## Contributions
 
