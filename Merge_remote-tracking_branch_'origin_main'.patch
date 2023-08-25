@@ -1,0 +1,53 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 1095a0704abe0e765388d918bede2e4629836eab)
++++ b/app/build.gradle	(revision 83e9cea651e7aa5d86d4716368c95363944db751)
+@@ -53,6 +53,9 @@
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
++    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
++    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
++    implementation 'com.google.android.material:material:1.5.0-alpha01'
+     testImplementation 'junit:junit:4.13.2'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+Index: app/src/main/res/layout/all_workouts_fragment.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/all_workouts_fragment.xml b/app/src/main/res/layout/all_workouts_fragment.xml
+--- a/app/src/main/res/layout/all_workouts_fragment.xml	(revision 1095a0704abe0e765388d918bede2e4629836eab)
++++ b/app/src/main/res/layout/all_workouts_fragment.xml	(revision 83e9cea651e7aa5d86d4716368c95363944db751)
+@@ -7,7 +7,7 @@
+     tools:context=".AllWorkoutsFragment">
+ 
+     <androidx.recyclerview.widget.RecyclerView
+-        android:id="@+id/workout_list"
++        android:id="@+id/your_workout_list"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:clipToPadding="false"
+Index: app/src/main/res/values-iw/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-iw/strings.xml b/app/src/main/res/values-iw/strings.xml
+--- a/app/src/main/res/values-iw/strings.xml	(revision 1095a0704abe0e765388d918bede2e4629836eab)
++++ b/app/src/main/res/values-iw/strings.xml	(revision 83e9cea651e7aa5d86d4716368c95363944db751)
+@@ -2,7 +2,8 @@
+ 
+ <resources>
+ 
+-    <string name="all_workouts"> כל התרגילים</string>
++    <string name="all_workouts">כל התרגילים</string>
++    <string name="menus">תפריטים</string>
+     <string name="your_workouts">התרגילים שלי</string>
+     <string name="workout_description">Workout Description</string>
+     <string name="bmi_calculator"> מחשבון BMI</string>
