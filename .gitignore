@@ -9,6 +9,8 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.app/src/main/java/com/example/myapplication/utils/ApiKey.kt
+
 .DS_Store
 /build
 /captures
