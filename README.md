@@ -10,7 +10,6 @@ Workout App Kotlin is a mobile application built with Kotlin that allows users t
 - View exercise details, including name, body parts targeted, equipment required, and animated GIFs.
 - Track your workout progress and mark completed exercises.
 - Customize your workout routine and create personalized exercise lists.
-- 
 - User-friendly interface with smooth navigation and intuitive design.
 
 ## Screenshots
@@ -78,7 +77,6 @@ https://github.com/maorshriki/workout_app_kotlin/assets/74913575/f2f5f706-a87a-4
  *
  * 3. BMI API: Provides BMI calculations from the RapidAPI platform.
  *    The API is accessed through the BMIApiService interface.
- *
  * Each API service is set up as a singleton via Hilt's @Singleton annotation and is provided
  * through separate methods in the NetworkModule.
  */
