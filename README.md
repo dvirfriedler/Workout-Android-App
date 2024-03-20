@@ -1,14 +1,16 @@
 # Workout App Kotlin
 
-Workout App Kotlin is a mobile application built with Kotlin that allows users to explore and track different workout exercises. The app provides a user-friendly interface for browsing exercise details, including body parts targeted, equipment required, and animated GIFs demonstrating the exercises.
+Workout App Kotlin is a mobile application built with Kotlin that allows users to explore and track different workout exercises, get a list of recipes according to a range of calories chosen by the user, and calculate their BMI. The app provides a user-friendly interface for browsing exercise details, including targeted body parts, required equipment, and animated GIFs demonstrating the exercises.
 
 ## Features
 
 - Browse a wide range of workout exercises.
+- Get a list of recipes based on a calorie range you select.
+- Calculate your BMI according to your height and weight.
 - View exercise details, including name, body parts targeted, equipment required, and animated GIFs.
 - Track your workout progress and mark completed exercises.
-- Search exercises by name or body part.
 - Customize your workout routine and create personalized exercise lists.
+- 
 - User-friendly interface with smooth navigation and intuitive design.
 
 ## Screenshots
@@ -28,7 +30,7 @@ https://github.com/maorshriki/workout_app_kotlin/assets/74913575/f2f5f706-a87a-4
 - OkHttp - A powerful HTTP client for making network requests.
 - Glide - An image loading and caching library for displaying GIF animations and images.
 - JSON - Parsing and handling JSON data received from the API.
-- RapidAPI - Integration with RapidAPI platform for accessing workout exercise data.
+- RapidAPI - Integration with RapidAPI platform for accessing workout exercise data, recipes data, and BMI.
 
 ## Installation
 
@@ -46,15 +48,11 @@ https://github.com/maorshriki/workout_app_kotlin/assets/74913575/f2f5f706-a87a-4
  * Before running the app, you need to set up your API key.
  * This key is used for all the APIs accessed by the app.
  *
- * 1. The API key is retrieved through the ApiKey object located in the com.example.myapplication.utils package.
+ * 1. The API key is retrieved through the ApiKey object located in the com.example.myapplication.utils.ApiKey package.
  *    Replace the existing API key with yours:
  *    
- *    object ApiKey {
- *        private const val apiKey: String = "YOUR_API_KEY"
- *        fun getApiKey(): String {
- *            return apiKey
- *        }
- *    }
+ *    private const val apiKey: String = "YOUR_API_KEY"
+
  *
  * 2. The API key is then accessed in the NetworkModule to provide headers for all the API calls made through Retrofit.
  *    If you have set the API key correctly, you don't need to change anything in the NetworkModule.
