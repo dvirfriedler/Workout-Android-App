@@ -15,7 +15,12 @@ Workout App Kotlin is a mobile application built with Kotlin that allows users t
 ## Screenshots
 
 
-https://github.com/maorshriki/workout_app_kotlin/assets/74913575/f2f5f706-a87a-4725-9616-f7f99d6dd5d1
+
+
+https://github.com/dvirfriedler/Workout-Android-App/assets/101118398/41c141c1-6b7c-4d11-89cf-47f893b20c42
+
+
+
 
 
 ## Technologies Used
